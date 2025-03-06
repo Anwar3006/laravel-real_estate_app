@@ -14,8 +14,12 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get("/logincustom", function () {
+    return Inertia::render('Auth/LoginCustom');
+});
+
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+    return Inertia::render('Home');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

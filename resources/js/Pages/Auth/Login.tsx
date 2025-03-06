@@ -29,7 +29,7 @@ export default function Login({
     };
 
     return (
-        <GuestLayout>
+        <GuestLayout bgImg="https://picsum.photos/200/300">
             <Head title="Log in" />
 
             {status && (
@@ -104,6 +104,14 @@ export default function Login({
                         Log in
                     </PrimaryButton>
                 </div>
+
+                <Link href="/register">
+                    <div className="mt-5 flex items-center justify-center rounded-md border border-gray-600 py-2 hover:cursor-pointer">
+                        <p className="text-sm text-gray-300">
+                            No Account? Create one
+                        </p>
+                    </div>
+                </Link>
             </form>
         </GuestLayout>
     );
