@@ -14,7 +14,8 @@ const CustomButton: FC<CustomButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`rounded-xl border border-gray-900 bg-gray-300 px-4 py-1 text-zinc-950 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300 ${className}`}
+      className={`flex items-center justify-center rounded-xl border border-gray-900 bg-gray-300 px-4 py-1 text-zinc-950 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300 ${className}`}
+      {...props}
     >
       {text}
     </button>
